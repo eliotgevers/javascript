@@ -1,5 +1,23 @@
 # Change Log
 
+## 7.7.5
+
+### Patch Changes
+
+- Adds runtime migration errors when using the removed `<SignedIn>`, `<SignedOut>`, and `<Protect>` components. ([#9273](https://github.com/clerk/javascript/pull/9273)) by [@royanger](https://github.com/royanger)
+
+- Updated dependencies [[`81840b3`](https://github.com/clerk/javascript/commit/81840b3b28bf89fdd6afcc155a84bc641dcd3b69), [`b7fb564`](https://github.com/clerk/javascript/commit/b7fb56455a657b209c0bb292bf05145e6dcde790), [`44edcc9`](https://github.com/clerk/javascript/commit/44edcc961664e83b8ff7d3c946b880fbb5a7d897)]:
+  - @clerk/shared@4.29.0
+  - @clerk/backend@3.16.5
+  - @clerk/react@6.14.2
+
+## 7.7.4
+
+### Patch Changes
+
+- Updated dependencies [[`167204b`](https://github.com/clerk/javascript/commit/167204b8b810a302364883a1aa048233a0216be8)]:
+  - @clerk/backend@3.16.4
+
 ## 7.7.3
 
 ### Patch Changes

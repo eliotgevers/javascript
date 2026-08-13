@@ -1,5 +1,41 @@
 # Change Log
 
+## 4.2.8
+
+### Patch Changes
+
+- Fix a race on Android where the native module refreshed the client every time the app returned to the foreground, which could mint a duplicate client during browser SSO completion and cause `401 authentication_invalid` errors right after signing in. The native SDK is now initialized with its foreground client refresh disabled, since the JavaScript layer owns client state. Session token refresh and shared session sync are unaffected. ([#9438](https://github.com/clerk/javascript/pull/9438)) by [@wobsoriano](https://github.com/wobsoriano)
+
+- Bump the bundled `clerk-android` SDK (`clerk-android-api` and `clerk-android-ui`) from `1.1.0` to `1.1.2`. See the Clerk Android release: https://github.com/clerk/clerk-android/releases/tag/v1.1.2. ([#9445](https://github.com/clerk/javascript/pull/9445)) by [@clerk-cookie](https://github.com/clerk-cookie)
+
+- Bump the bundled `clerk-ios` SDK from `1.3.8` to `1.3.9`. See the Clerk iOS release: https://github.com/clerk/clerk-ios/releases/tag/1.3.9. ([#9423](https://github.com/clerk/javascript/pull/9423)) by [@clerk-cookie](https://github.com/clerk-cookie)
+
+- Updated dependencies [[`81840b3`](https://github.com/clerk/javascript/commit/81840b3b28bf89fdd6afcc155a84bc641dcd3b69), [`b7fb564`](https://github.com/clerk/javascript/commit/b7fb56455a657b209c0bb292bf05145e6dcde790), [`44edcc9`](https://github.com/clerk/javascript/commit/44edcc961664e83b8ff7d3c946b880fbb5a7d897)]:
+  - @clerk/shared@4.29.0
+  - @clerk/clerk-js@6.29.0
+  - @clerk/react@6.14.2
+
+## 4.2.7
+
+### Patch Changes
+
+- Bump the bundled `clerk-android` SDK (`clerk-android-api` and `clerk-android-ui`) from `1.0.39` to `1.1.0`. See the Clerk Android release: https://github.com/clerk/clerk-android/releases/tag/v1.1.0. ([#9400](https://github.com/clerk/javascript/pull/9400)) by [@clerk-cookie](https://github.com/clerk-cookie)
+
+- Align Android OkHttp dependencies to compatible versions so Clerk native networking and React Native can run without a mixed OkHttp 4 and 5 classpath. ([#9371](https://github.com/clerk/javascript/pull/9371)) by [@wobsoriano](https://github.com/wobsoriano)
+
+## 4.2.6
+
+### Patch Changes
+
+- Add an experimental `ClerkProvider` option to disable native client synchronization when Clerk native components are not used. ([#9396](https://github.com/clerk/javascript/pull/9396)) by [@wobsoriano](https://github.com/wobsoriano)
+
+- Bump the bundled `clerk-ios` SDK from `1.3.6` to `1.3.7`. See the Clerk iOS release: https://github.com/clerk/clerk-ios/releases/tag/1.3.7. ([#9390](https://github.com/clerk/javascript/pull/9390)) by [@clerk-cookie](https://github.com/clerk-cookie)
+
+- Bump the bundled `clerk-ios` SDK from `1.3.7` to `1.3.8`. See the Clerk iOS release: https://github.com/clerk/clerk-ios/releases/tag/1.3.8. ([#9395](https://github.com/clerk/javascript/pull/9395)) by [@clerk-cookie](https://github.com/clerk-cookie)
+
+- Updated dependencies []:
+  - @clerk/clerk-js@6.28.1
+
 ## 4.2.5
 
 ### Patch Changes
