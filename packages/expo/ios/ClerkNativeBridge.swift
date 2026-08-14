@@ -427,6 +427,7 @@ final class ClerkNativeBridge {
     )
 
     return [
+      "id": signIn.id,
       "status": signIn.status.rawValue,
       "createdSessionId": Self.bridgeValue(signIn.createdSessionId),
     ]
